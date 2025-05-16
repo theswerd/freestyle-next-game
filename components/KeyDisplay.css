@@ -69,3 +69,27 @@
   margin-top: 2px;
   opacity: 0.8;
 }
+
+.game-stats {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid #444;
+}
+
+.fps-counter {
+  font-family: monospace;
+  color: #50fa7b;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.key-press-counter {
+  font-family: monospace;
+  color: #bd93f9;
+  font-size: 14px;
+}

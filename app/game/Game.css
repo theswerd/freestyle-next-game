@@ -12,4 +12,160 @@
   font-size: 5rem;
   position: absolute;
   transition: transform 0.05s linear;
+  z-index: 2;
+}
+
+.event-demo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: center center;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.instruction {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1px solid #444;
+}
+
+/* Platformer Game Styles */
+.platformer-game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282a36;
+  position: relative;
+  overflow: hidden;
+}
+
+.platformer-player {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  z-index: 2;
+  transform-origin: center;
+  transition: transform 0.05s linear;
+}
+
+.platformer-player .debug-outline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.platform {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.platform.debug {
+  border: 2px dashed rgba(255, 255, 0, 0.8);
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+}
+
+.dust-particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.platformer-instruction {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #444;
+  z-index: 10;
+}
+
+.debug-info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #50fa7b;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #bd93f9;
+  z-index: 10;
+}
+
+/* Game Selector Styles */
+.game-selector {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.game-selector button {
+  background-color: #333;
+  color: #aaa;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-selector button:hover {
+  background-color: #444;
+  color: white;
+}
+
+.game-selector button.active {
+  background-color: #6272a4;
+  color: white;
+  border-color: #8be9fd;
 }

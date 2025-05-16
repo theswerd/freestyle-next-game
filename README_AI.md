@@ -261,6 +261,14 @@ The `GameWrapper` component provides:
 - `subscribe(eventType, callback)`: Listen for game events
 - `emit(eventType, payload)`: Broadcast game events
 
+You can import these hooks using the convenient path alias:
+
+```tsx
+import { useGameLoop, useKeyState } from '@/hooks/gameHooks';
+```
+
+This provides a cleaner import experience than importing directly from the GameWrapper component.
+
 ### Event Types
 
 - `'tick'`: Emitted every frame with deltaTime

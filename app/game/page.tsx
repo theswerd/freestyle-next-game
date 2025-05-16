@@ -10,7 +10,7 @@ import "./Game.css";
 export default function Game() {
   return (
     <GameWrapper>
-      {/* Put your game in here to access all useGameLoop and useKeyState hooks */}
+      {/* You can use game components that import from '@/hooks/gameHooks' */}
     </GameWrapper>
   );
 }

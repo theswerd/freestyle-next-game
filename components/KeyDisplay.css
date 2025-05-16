@@ -1,0 +1,71 @@
+.directional-pad {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 12px;
+  user-select: none;
+}
+
+.d-pad-row {
+  display: flex;
+  justify-content: center;
+}
+
+.d-pad-button {
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  border: 2px solid #444;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-family: monospace;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin: 4px;
+}
+
+.d-pad-center {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border: 2px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin: 9px;
+}
+
+.d-pad-button.active, .d-pad-center.active {
+  background-color: #50fa7b;
+  color: #000;
+  border-color: #88ffaa;
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(80, 250, 123, 0.5);
+}
+
+.d-pad-spacer {
+  width: 50px;
+  height: 50px;
+}
+
+.key-label {
+  font-size: 12px;
+  margin-top: 2px;
+  opacity: 0.8;
+}

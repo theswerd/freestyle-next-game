@@ -1,0 +1,15 @@
+.game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  position: relative;
+}
+
+.player {
+  font-size: 5rem;
+  position: absolute;
+  transition: transform 0.05s linear;
+}
